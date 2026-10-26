@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #080F20;
+    --bg-surface: #111D34;
+    --bg-card: #111D34;
+    --bg-card-hover: #162442;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-accent: rgba(96, 70, 245, 0.4);
+    --accent-primary: #6046F5;
+    --accent-violet: #A78BFA;
+    --accent-secondary: #22D3EE;
+    --accent-success: #34D399;
+    --accent-warning: #FBBF24;
+    --text-primary: #F8FAFC;
+    --text-secondary: #9CA8C5;
+    --text-muted: #64748B;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08080D;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(17, 24, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(21, 28, 48, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glow-violet {
+  box-shadow: 0 0 35px -8px rgba(121, 89, 245, 0.45);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 35px -8px rgba(34, 211, 238, 0.35);
+}
+
+.gradient-text-brand {
+  background: linear-gradient(135deg, #F8FAFC 0%, #CBD5E1 50%, #22D3EE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-accent {
+  background: linear-gradient(135deg, #7959F5 0%, #A78BFA 50%, #22D3EE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hide scrollbar (icon rail nav) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
